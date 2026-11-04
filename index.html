@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SIGAP RESCUE</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="theme-color" content="#00ff41">
+</head>
+<body class="mode-siaga">
+    <!-- MODE SIAGA -->
+    <div id="siaga-screen">
+        <h1>🟢 SIGAP RESCUE</h1>
+        <p>Status: <span id="status-text">AMAN</span></p>
+        <div id="alert-box" style="display:none;">
+            <h2 id="alert-title"></h2>
+            <p id="alert-desc"></p>
+            <button id="btn-evacuate" onclick="switchMode('darurat')">🚨 EVAKUASI SEKARANG</button>
+        </div>
+        <button id="btn-test-notif" onclick="testNotification()">🔔 Test Notifikasi</button>
+    </div>
+
+    <!-- MODE DARURAT -->
+    <div id="darurat-screen" style="display:none;">
+        <div class="compass-ring">
+            <div id="arrow"></div>
+            <div id="dist-label">Menuju Titik Kumpul</div>
+        </div>
+        <button onclick="scanQR()">📷 Scan Landmark</button>
+        <button onclick="switchMode('siaga')">⬅️ Kembali Siaga</button>
+    </div>
+
+    <!-- LOAD SCRIPTS -->
+    <script type="module" src="/js/core.js"></script>
+</body>
+</html>
