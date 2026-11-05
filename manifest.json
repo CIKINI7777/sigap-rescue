@@ -1,0 +1,9 @@
+{
+  "name": "SIGAP RESCUE",
+  "short_name": "SIGAP",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f0fff0",
+  "theme_color": "#00ff41",
+  "icons": []
+}
